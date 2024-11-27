@@ -1,255 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Youtube Clone</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .nav-pills .nav-link {
-            margin-right: 5px; 
-        }
-        .nav-pills .nav-link.active {
-            background-color: #252121;
-        }
-    </style>
+
 </head>
+
 <body>
-    
-        <nav class="navbar navbar-light bg-body-tertiary">
+    <header class="header glass-effect" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_img"> <a href="./profile.html"><img
+                src="https://images.pexels.com/photos/3563766/pexels-photo-3563766.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt=""></a> </div>
+
+    </header>
+    <div class="container py-2">
+
+        <nav class="navbar   py-3 ">
             <div class="container-fluid">
-                <div class="container mt-4">
-                    <div class="shorts">
-                        <h3 style="font-weight: bold;"> <i class="fa-brands fa-youtube" style="color: #ff1605;"></i>Youtube </h3></div>
-              <form class="d-flex input-group w-auto">
-                <input
-                  type="search"
-                  class="form-control rounded"
-                  placeholder="Search"
-                  aria-label="Search"
-                  aria-describedby="search-addon"
-                />
-                <span class="input-group-text border-0" id="search-addon">
-                  <i class="fas fa-search"></i>
-                </span>
-              </form>
+                <h3 style="font-weight: bold;"> <i class="fa-brands fa-youtube" style="color: #ff1605;"></i>Youtube
+                </h3>
+
+
+                <form class="d-flex mx-auto w-50">
+                    <input class="form-control me-2" type="search" placeholder="Search here..." aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+                <button class="btn btn-danger">Sign In</button>
             </div>
-          </nav>
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
-          </div>
-          
-          <div class="container">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                  <div class="card h-100 "  >
-                    <img src="https://media.istockphoto.com/id/1184557831/photo/diwali-festival-background-content-with-rangoli-pattern-on-white-floor-decorated-with-flowers.jpg?b=1&s=612x612&w=0&k=20&c=cdE4iuovVFZjGIrSlj5pKxgbJ7FBXlOsIHZS4OmyJkI=" class="card-img-top" alt="...">
+        </nav>
+    </div>
+    <div class="container mt-4">
+        <div class="d-flex tabs">
+            <a href="#" class="active">All</a>
+            <button class="btn btn-light" type="submit"><a href="#">Videos</a></button>
+            <button class="btn btn-light" type="submit"><a href="#">Shorts</a></button>
+            <button class="btn btn-light" type="submit"><a href="#">Watched</a></button>
+            <button class="btn btn-light" type="submit"><a href="#">Unwatched</a></button>
+        </div>
+        <hr>
+    </div>
+
+
+    <!--Section 2-->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 " style="border-radius: 20px;">
+                    <div class="hover-icons">
+                        <a href="#" title="Download"><i class="fas fa-download"></i></a>
+                        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                    <a href="./pin.html"><img
+                            src="https://media.istockphoto.com/id/1184557831/photo/diwali-festival-background-content-with-rangoli-pattern-on-white-floor-decorated-with-flowers.jpg?b=1&s=612x612&w=0&k=20&c=cdE4iuovVFZjGIrSlj5pKxgbJ7FBXlOsIHZS4OmyJkI="
+                            class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                      <h5 class="card-title">Rangoli Art # Diwali Rangoli Art</h5>
-                      
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-body-secondary">Anu's World</small><br>
-                      <small class="text-body-secondary">1.2M views . 2 Years Ago</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card h-100" style="border-radius: 20px;">
-                    <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Fresh White Roses Video</h5>
-                     
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-body-secondary">Flowers Page</small><br>
-                      <small class="text-body-secondary">24K views . 4 months ago</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card h-100" style="border-radius: 10px;">
-                    <img src="https://images.pexels.com/photos/1183434/pexels-photo-1183434.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h4 class="card-title">Cute Cat Videos</h4>
-                      
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-body-secondary">Funny Animals Town</small><br>
-                      <small class="text-body-secondary"> 1K views .1 week ago </small>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100" style="border-radius: 10px;">
-                      <img src="https://media.istockphoto.com/id/1184557831/photo/diwali-festival-background-content-with-rangoli-pattern-on-white-floor-decorated-with-flowers.jpg?b=1&s=612x612&w=0&k=20&c=cdE4iuovVFZjGIrSlj5pKxgbJ7FBXlOsIHZS4OmyJkI=" class="card-img-top" alt="...">
-                      <div class="card-body">
                         <h5 class="card-title">Rangoli Art # Diwali Rangoli Art</h5>
-                        
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-body-secondary">Anu's World</small><br>
-                        <small class="text-body-secondary">1.2M views . 2 Years Ago</small>
-                      </div>
+
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100 " style="border-radius: 10px;">
-                      <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="...">
-                      <div class="card-body">
+                    <div class="card-footer">
+                        <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="" class="img-fluid channel-logo mt-1 mx-2"><small class="text-body-secondary">Anu's
+                            World</small><br>
+                        <small class="text-body-secondary mx-4">1.2M views . 2 Years Ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="border-radius: 20px;">
+                    <div class="hover-icons">
+                        <a href="#" title="Download"><i class="fas fa-download"></i></a>
+                        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                    <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
                         <h5 class="card-title">Fresh White Roses Video</h5>
-                       
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-body-secondary">Flowers Page</small><br>
-                        <small class="text-body-secondary">24K views . 4 months ago</small>
-                      </div>
+
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100 ">
-                      <img src="https://images.pexels.com/photos/1183434/pexels-photo-1183434.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top rounded ro" alt="...">
-                      <div class="card-body">
+                    <div class="card-footer">
+                        <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="" class="img-fluid channel-logo mt-1 mx-2"><small class="text-body-secondary">Flowers
+                            Page</small><br>
+                        <small class="text-body-secondary mx-4">24K views . 4 months ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="border-radius: 20px;">
+                    <div class="hover-icons">
+                        <a href="#" title="Download"><i class="fas fa-download"></i></a>
+                        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                    <img src="https://images.pexels.com/photos/1183434/pexels-photo-1183434.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
                         <h4 class="card-title">Cute Cat Videos</h4>
-                        
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-body-secondary">Funny Animals Town</small><br>
-                        <small class="text-body-secondary"> 1K views .1 week ago </small>
-                      </div>
+
                     </div>
-                  </div>
-              </div>
-          </div>
-          <!--Section Shorts-->
-        
-          
-          <div class="container mt-4">
-            <div class="shorts">
-                <h3>
-                    Shorts
-                    
-                  </h3>
-    
-              </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                  <div class="card h-200">
-                    <img src="https://images.pexels.com/photos/3777622/pexels-photo-3777622.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="...">
-                    
+                    <div class="card-footer">
+                        <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="" class="img-fluid channel-logo mt-1 mx-2"><small class="text-body-secondary">Funny
+                            Animals Town</small><br>
+                        <small class="text-body-secondary mx-4"> 1K views .1 week ago </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="border-radius: 20px;">
+                    <div class="hover-icons">
+                        <a href="#" title="Download"><i class="fas fa-download"></i></a>
+                        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                    <img src="https://media.istockphoto.com/id/1184557831/photo/diwali-festival-background-content-with-rangoli-pattern-on-white-floor-decorated-with-flowers.jpg?b=1&s=612x612&w=0&k=20&c=cdE4iuovVFZjGIrSlj5pKxgbJ7FBXlOsIHZS4OmyJkI="
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Rangoli Art # Diwali Rangoli Art</h5>
+
+                    </div>
+                    <div class="card-footer">
+                        <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="" class="img-fluid channel-logo mt-1 mx-2"><small class="text-body-secondary">Anu's
+                            World</small><br>
+                        <small class="text-body-secondary mx-4">1.2M views . 2 Years Ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 " style="border-radius: 20px;">
+                    <div class="hover-icons">
+                        <a href="#" title="Download"><i class="fas fa-download"></i></a>
+                        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                    <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh White Roses Video</h5>
+
+                    </div>
+                    <div class="card-footer">
+
+
+                        <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="" class="img-fluid channel-logo mt-1 mx-2"><small class="text-body-secondary">Flowers
+                            Page</small><br>
+                        <small class="text-body-secondary mx-4">24K views . 4 months ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="border-radius: 20px;">
+                    <div class="hover-icons">
+                        <a href="#" title="Download"><i class="fas fa-download"></i></a>
+                        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                    <img src="https://images.pexels.com/photos/1183434/pexels-photo-1183434.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="card-img-top rounded ro" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Cute Cat Videos</h4>
+
+                    </div>
+                    <div class="card-footer">
+                        <img src="https://images.pexels.com/photos/2306275/pexels-photo-2306275.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="" class="img-fluid channel-logo mt-1 mx-2"><small class="text-body-secondary">Funny
+                            Animals Town</small><br>
+                        <small class="text-body-secondary mx-4"> 1K views .1 week ago </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Section Shorts-->
+
+
+    <div class="container mt-4">
+        <div class="shorts">
+            <h3>
+                Shorts
+
+            </h3>
+
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100" style="border-radius: 20px;">
+                    <div class="hover-icons">
+                        <a href="#" title="Download"><i class="fas fa-download"></i></a>
+                        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                    <a href="./pin.html"><img
+                            src="https://images.pexels.com/photos/3777622/pexels-photo-3777622.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            class="card-img-top" alt="..."></a>
+
                     <div class="card-footer">
                         <h4>Funny cat videos #memes #kittens</h4>
-                      <small class="text-body-secondary">1M views</small>
+                        <small class="text-body-secondary">1M views</small>
                     </div>
-                  </div>
                 </div>
-                <div class="col">
-                  <div class="card h-150">
-                    <img src="https://images.pexels.com/photos/29467548/pexels-photo-29467548/free-photo-of-stunning-chicago-downtown-cityscape-at-daytime.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="...">
-                    
+            </div>
+            <div class="col">
+                <div class="card h-100" style="border-radius: 20px;">
+                    <div class="hover-icons">
+                        <a href="#" title="Download"><i class="fas fa-download"></i></a>
+                        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                    <img src="https://images.pexels.com/photos/29467548/pexels-photo-29467548/free-photo-of-stunning-chicago-downtown-cityscape-at-daytime.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="card-img-top" alt="...">
+
                     <div class="card-footer">
                         <h4>
                             Northern Areas # nature
 
                         </h4>
-                      <small class="text-body-secondary">12K views</small>
+                        <small class="text-body-secondary">12K views</small>
                     </div>
-                  </div>
                 </div>
-                <div class="col">
-                  <div class="card h-200">
-                    <img src="https://images.pexels.com/photos/29460547/pexels-photo-29460547/free-photo-of-elegant-traditional-bridal-portrait-in-lahore.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="...">
-                    
+            </div>
+            <div class="col">
+                <div class="card h-100" style="border-radius: 20px;">
+                    <div class="hover-icons">
+                        <a href="#" title="Download"><i class="fas fa-download"></i></a>
+                        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                    <img src="https://images.pexels.com/photos/29460547/pexels-photo-29460547/free-photo-of-elegant-traditional-bridal-portrait-in-lahore.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="card-img-top" alt="...">
+
                     <div class="card-footer">
                         <h4>
                             Winter Collection # pakistani dresses #suits
                         </h4>
-                      <small class="text-body-secondary">90K views</small>
+                        <small class="text-body-secondary">90K views</small>
                     </div>
-                  </div>
                 </div>
-                
-              </div>
-          </div>
-        <header class="header" id="header">
-            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-            <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
-        </header>
+            </div>
+
+        </div>
+    </div>
+
+    <body id="body-pd">
+        
+
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
-                <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name" style="font-weight: bold;">Youtube</span> </a>
-                    <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Home</span> </a> <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> </div>
-                </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
-            
+                <div> <a href="#" class="nav_logo"> <i class="fa-brands fa-youtube" style="color: #ff1605;"></i><span
+                            class="nav_logo-name" style="font-weight: bold;">Youtube</span> </a>
+                    <div class="nav_list"> <a href="#" class="nav_link active"> <i class="fa-solid fa-house"
+                                style="color: #f5f5f5;"></i>
+                            <span class="nav_name">Home</span> </a> <a href="#" class="nav_link"> <i
+                                class="fas fa-video"></i> Shorts
+                        </a> <a href="#" class="nav_link"> <i class="fas fa-box"></i> <span
+                                class="nav_name">Subscription</span> </a> <a href="./profile.html" class="nav_link"> <i
+                                class="fas fa-user-circle"></i> <span class="nav_name">My Prpfile</span> </a> <a href="#"
+                            class="nav_link"><i class="fas fa-history"></i> <span class="nav_name">History</span> </a>
+                        <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span
+                                class="nav_name">Stats</span> </a>
+                        <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span
+                                class="nav_name">SignOut</span> </a>
+                    </div>
+                </div>
             </nav>
         </div>
-        <!--Container Main start-->
-        <div class="height-100 bg-light">
-            <h4></h4>
-        </div>
-        <!--Container Main end-->
        
+
         <script>
-            document.addEventListener("DOMContentLoaded", function(event) {
-   
-   const showNavbar = (toggleId, navId, bodyId, headerId) =>{
-   const toggle = document.getElementById(toggleId),
-   nav = document.getElementById(navId),
-   bodypd = document.getElementById(bodyId),
-   headerpd = document.getElementById(headerId)
-   
-   // Validate that all variables exist
-   if(toggle && nav && bodypd && headerpd){
-   toggle.addEventListener('click', ()=>{
-   // show navbar
-   nav.classList.toggle('show')
-   // change icon
-   toggle.classList.toggle('bx-x')
-   // add padding to body
-   bodypd.classList.toggle('body-pd')
-   // add padding to header
-   headerpd.classList.toggle('body-pd')
-   })
-   }
-   }
-   
-   showNavbar('header-toggle','nav-bar','body-pd','header')
-   
-   /*===== LINK ACTIVE =====*/
-   const linkColor = document.querySelectorAll('.nav_link')
-   
-   function colorLink(){
-   if(linkColor){
-   linkColor.forEach(l=> l.classList.remove('active'))
-   this.classList.add('active')
-   }
-   }
-   linkColor.forEach(l=> l.addEventListener('click', colorLink))
-   
-    // Your code to run since DOM is loaded and ready
-   });
+            document.addEventListener("DOMContentLoaded", function (event) {
+
+                const showNavbar = (toggleId, navId, bodyId, headerId) => {
+                    const toggle = document.getElementById(toggleId),
+                        nav = document.getElementById(navId),
+                        bodypd = document.getElementById(bodyId),
+                        headerpd = document.getElementById(headerId)
+
+                    // Validate that all variables exist
+                    if (toggle && nav && bodypd && headerpd) {
+                        toggle.addEventListener('click', () => {
+                            // show navbar
+                            nav.classList.toggle('show')
+                            // change icon
+                            toggle.classList.toggle('bx-x')
+                            // add padding to body
+                            bodypd.classList.toggle('body-pd')
+                            // add padding to header
+                            headerpd.classList.toggle('body-pd')
+                        })
+                    }
+                }
+
+                showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+                /*===== LINK ACTIVE =====*/
+                const linkColor = document.querySelectorAll('.nav_link')
+
+                function colorLink() {
+                    if (linkColor) {
+                        linkColor.forEach(l => l.classList.remove('active'))
+                        this.classList.add('active')
+                    }
+                }
+                linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+                // Your code to run since DOM is loaded and ready
+            });
         </script>
-</body>
+        <footer class="bg-light text-center py-3">
+            <p>© 2024 YouTube Clone - All Rights Reserved by Alishba</p>
+        </footer>
+
+    </body>
+
 </html>
